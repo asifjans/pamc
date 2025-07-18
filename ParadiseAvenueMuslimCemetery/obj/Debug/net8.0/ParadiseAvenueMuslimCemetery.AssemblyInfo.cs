@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParadiseAvenueMuslimCemetery")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7f0f305f1339fe635d45408f5d12071f068aef8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba974a55c0ac0ac2abbc0be0f08de96769ce2d4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParadiseAvenueMuslimCemetery")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParadiseAvenueMuslimCemetery")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

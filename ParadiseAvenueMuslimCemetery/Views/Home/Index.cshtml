@@ -98,7 +98,64 @@
         background-color: #6c757d; /* Gray */
     }
 </style>
+<style>
+   
+    .graveyard {
+        display: grid;
+        grid-template-columns: repeat(7, 142px);
+        gap: 8px;
+        justify-content: center;
+    }
 
+    .plot {
+        position: relative;
+        width: 150px;
+        height: 85px;
+        background-color: #4CAF50; /* Green for occupied */
+        border: 1px solid #999;
+        overflow: hidden;
+        transition: background 0.3s;
+        cursor: pointer;
+    }
+
+        .plot.empty {
+            background-color: #ccc; /* Gray for empty */
+        }
+
+    .plot-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        z-index: 1;
+        font-size: 16px;
+    }
+
+    .plot-info {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+        font-size: 12px;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: bottom 0.4s ease;
+        z-index: 2;
+        text-align: left;
+    }
+
+    .plot:hover .plot-info {
+        bottom: 0;
+    }
+</style>
 
 <div class="container-fluid p-0 mb-5">
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -167,94 +224,143 @@
     </div>
 </div>
 <!-- Carousel End -->
-<div class="container-xxl py-5 memorial-section">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Sacred Memories</div>
-            <h1 class="display-6 mb-5">
-                In Loving Memory
-            </h1>
-            <p class="lead">
-                Help maintain one of the largest Muslim cemeteries in the U.S., offering dignified, Shariah-compliant burials for the community.
+@* <div class="container-xxl py-5 memorial-section">
+    <div class="container"> *@
 
-            </p>
+        <div class="graveyard">
+            <!-- 7x7 = 49 plots -->
+            <!-- We'll just mark a few as occupied for demo, the rest as empty -->
+            <!-- Row A -->
+            <div class="plot occupied">
+                <div class="plot-label">A1</div>
+                <div class="plot-info">
+                    <strong>Name:</strong> Ahmed<br>
+                    <strong>Father:</strong> Yousuf Khan<br>
+                    <strong>DOB:</strong> 1950-04-12<br>
+                    <strong>DOD:</strong> 2023-05-10
+                </div>
+            </div>
+            <div class="plot empty"><div class="plot-label">A2</div></div>
+            <div class="plot occupied">
+                <div class="plot-label">A3</div>
+                <div class="plot-info">
+                    <strong>Name:</strong> Fatima <br>
+                    <strong>Father:</strong> Hassan Ali<br>
+                    <strong>DOB:</strong> 1965-11-03<br>
+                    <strong>DOD:</strong> 2021-08-22
+                </div>
+            </div>
+            <div class="plot empty"><div class="plot-label">A4</div></div>
+            <div class="plot empty"><div class="plot-label">A5</div></div>
+            <div class="plot empty"><div class="plot-label">A6</div></div>
+            <div class="plot empty"><div class="plot-label">A7</div></div>
+
+            <!-- Row B -->
+            <div class="plot empty"><div class="plot-label">B1</div></div>
+            <div class="plot occupied">
+                <div class="plot-label">B2</div>
+                <div class="plot-info">
+                    <strong>Name:</strong> Imran <br>
+                    <strong>Father:</strong> Nasir Qureshi<br>
+                    <strong>DOB:</strong> 1944-03-14<br>
+                    <strong>DOD:</strong> 2010-12-01
+                </div>
+            </div>
+            <div class="plot empty"><div class="plot-label">B3</div></div>
+            <div class="plot empty"><div class="plot-label">B4</div></div>
+            <div class="plot empty"><div class="plot-label">B5</div></div>
+            <div class="plot empty"><div class="plot-label">B6</div></div>
+            <div class="plot occupied">
+                <div class="plot-label">B7</div>
+                <div class="plot-info">
+                    <strong>Name:</strong> Nabila <br>
+                    <strong>Father:</strong> Arshad Usman<br>
+                    <strong>DOB:</strong> 1958-03-05<br>
+                    <strong>DOD:</strong> 2018-08-14
+                </div>
+            </div>
+
+            <!-- Row C to G - Mostly empty, some occupied -->
+            <!-- You can copy and fill more occupied data as needed -->
+            <!-- Row C -->
+            <div class="plot empty"><div class="plot-label">C1</div></div>
+            <div class="plot empty"><div class="plot-label">C2</div></div>
+            <div class="plot empty"><div class="plot-label">C3</div></div>
+            <div class="plot occupied">
+                <div class="plot-label">C4</div>
+                <div class="plot-info">
+                    <strong>Name:</strong> Rashid <br>
+                    <strong>Father:</strong> Jamil <br>
+                    <strong>DOB:</strong> 1940-10-20<br>
+                    <strong>DOD:</strong> 2015-02-11
+                </div>
+            </div>
+            <div class="plot empty"><div class="plot-label">C5</div></div>
+            <div class="plot empty"><div class="plot-label">C6</div></div>
+            <div class="plot empty"><div class="plot-label">C7</div></div>
+
+            <!-- Row D -->
+            <div class="plot empty"><div class="plot-label">D1</div></div>
+            <div class="plot empty"><div class="plot-label">D2</div></div>
+            <div class="plot empty"><div class="plot-label">D3</div></div>
+            <div class="plot empty"><div class="plot-label">D4</div></div>
+            <div class="plot occupied">
+                <div class="plot-label">D5</div>
+                <div class="plot-info">
+                    <strong>Name:</strong> Khalida <br>
+            <strong>Father:</strong> Ahmed <br>
+                    <strong>DOB:</strong> 1930-12-01<br>
+                    <strong>DOD:</strong> 2023-01-07
+                </div>
+            </div>
+            <div class="plot empty"><div class="plot-label">D6</div></div>
+            <div class="plot empty"><div class="plot-label">D7</div></div>
+
+            <!-- Row E -->
+            <div class="plot empty"><div class="plot-label">E1</div></div>
+            <div class="plot empty"><div class="plot-label">E2</div></div>
+            <div class="plot empty"><div class="plot-label">E3</div></div>
+            <div class="plot empty"><div class="plot-label">E4</div></div>
+            <div class="plot empty"><div class="plot-label">E5</div></div>
+            <div class="plot occupied">
+                <div class="plot-label">E6</div>
+                <div class="plot-info">
+                    <strong>Name:</strong> Salman Javed<br>
+                    <strong>Father:</strong> Javed <br>
+                    <strong>DOB:</strong> 1971-08-08<br>
+                    <strong>DOD:</strong> 2022-09-30
+                </div>
+            </div>
+            <div class="plot empty"><div class="plot-label">E7</div></div>
+
+            <!-- Row F -->
+            <div class="plot empty"><div class="plot-label">F1</div></div>
+            <div class="plot empty"><div class="plot-label">F2</div></div>
+            <div class="plot empty"><div class="plot-label">F3</div></div>
+            <div class="plot empty"><div class="plot-label">F4</div></div>
+            <div class="plot empty"><div class="plot-label">F5</div></div>
+            <div class="plot empty"><div class="plot-label">F6</div></div>
+            <div class="plot occupied">
+                <div class="plot-label">F7</div>
+                <div class="plot-info">
+                    <strong>Name:</strong> Samina <br>
+                    <strong>Father:</strong>  Tariq<br>
+                    <strong>DOB:</strong> 1962-01-15<br>
+                    <strong>DOD:</strong> 2019-03-12
+                </div>
+            </div>
+
+            <!-- Row G -->
+            <div class="plot empty"><div class="plot-label">G1</div></div>
+            <div class="plot empty"><div class="plot-label">G2</div></div>
+            <div class="plot empty"><div class="plot-label">G3</div></div>
+            <div class="plot empty"><div class="plot-label">G4</div></div>
+            <div class="plot empty"><div class="plot-label">G5</div></div>
+            <div class="plot empty"><div class="plot-label">G6</div></div>
+            <div class="plot empty"><div class="plot-label">G7</div></div>
         </div>
-
-        <div class="row g-4">
-            <!-- Memorial Card 1 (Occupied) -->
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="memorial-card position-relative rounded overflow-hidden">
-                    <div class="memorial-img-container">
-                        <img class="img-fluid memorial-img" src="~/Theme/img/logo-Ai.png" alt="Resting Place">
-                        <div class="memorial-overlay">
-                            <div class="memorial-info">
-                                <h5>John Michael Smith</h5>
-                                <p><strong>Father:</strong> William Smith</p>
-                                <p><strong>Born:</strong> January 15, 1950</p>
-                                <p><strong>Departed:</strong> March 22, 2020</p>
-                                <p class="memorial-message">"Forever in our hearts"</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="status-badge status-occupied">Occupied</div>
-                </div>
-            </div>
-
-            <!-- Memorial Card 2 (Available) -->
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="memorial-card position-relative rounded overflow-hidden">
-                    <div class="memorial-img-container">
-                        <img class="img-fluid memorial-img" src="~/Theme/img/" alt="Resting Place">
-                        <div class="memorial-overlay">
-                            <div class="memorial-info">
-                                <h5>Available Plot</h5>
-                                <p>This peaceful resting place awaits</p>
-                                <button class="btn btn-outline-light mt-2">Reserve</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="status-badge status-available">Available</div>
-                </div>
-            </div>
-
-            <!-- Memorial Card 3 (Occupied) -->
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="memorial-card position-relative rounded overflow-hidden">
-                    <div class="memorial-img-container">
-                        <img class="img-fluid memorial-img" src="~/Theme/img/logo-Ai.png" alt="Resting Place">
-                        <div class="memorial-overlay">
-                            <div class="memorial-info">
-                                <h5>Sarah Elizabeth Johnson</h5>
-                                <p><strong>Father:</strong> Robert Johnson</p>
-                                <p><strong>Born:</strong> August 5, 1962</p>
-                                <p><strong>Departed:</strong> November 18, 2021</p>
-                                <p class="memorial-message">"A life beautifully lived"</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="status-badge status-occupied">Occupied</div>
-                </div>
-            </div>
-
-            <!-- Memorial Card 4 (Available) -->
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="memorial-card position-relative rounded overflow-hidden">
-                    <div class="memorial-img-container">
-                        <img class="img-fluid memorial-img" src="~/Theme/img/graveyard4.jpg" alt="Resting Place">
-                        <div class="memorial-overlay">
-                            <div class="memorial-info">
-                                <h5>Available Plot</h5>
-                                <p>This peaceful resting place awaits</p>
-                                <button class="btn btn-outline-light mt-2">Reserve</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="status-badge status-available">Available</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+  @*   </div>
+</div> *@
 
 <!-- About Start -->
 <div class="container-xxl py-5">

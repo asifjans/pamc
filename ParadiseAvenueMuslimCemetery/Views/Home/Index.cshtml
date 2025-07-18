@@ -99,12 +99,83 @@
     }
 </style>
 <style>
+    .graveyard {
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(7, 142px);
+        gap: 12px;
+        justify-content: center;
+        background: linear-gradient(to top, #55cc8b, #70ac40, #7b9c4b);
+    }
+
+    .plot {
+        position: relative;
+        width: 150px;
+        height: 95px;
+        border-radius: 20px 20px 8px 8px; /* rounded top like tombstone */
+        background: linear-gradient(to bottom, #4CAF50, #3b9440); /* subtle gradient */
+        border: 2px solid #3e3e3e;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+        .plot.empty {
+            background: linear-gradient(to bottom, #ccc, #aaa);
+        }
+
+        .plot:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+        }
+
+    .plot-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        z-index: 1;
+        font-size: 16px;
+        color: #fff;
+        text-shadow: 0 1px 2px #000;
+    }
+
+    .plot-info {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.88);
+        color: #fff;
+        font-size: 13px;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: bottom 0.4s ease;
+        z-index: 2;
+        text-align: left;
+    }
+
+    .plot:hover .plot-info {
+        bottom: 0;
+    }
+</style>
+
+@* <style>
    
     .graveyard {
+        padding: 31px 0px 32px 0px;
         display: grid;
         grid-template-columns: repeat(7, 142px);
         gap: 8px;
         justify-content: center;
+        background: linear-gradient(to top, #55cc8b, #70ac40, #7b9c4b);
     }
 
     .plot {
@@ -156,7 +227,7 @@
         bottom: 0;
     }
 </style>
-
+ *@
 <div class="container-fluid p-0 mb-5">
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">

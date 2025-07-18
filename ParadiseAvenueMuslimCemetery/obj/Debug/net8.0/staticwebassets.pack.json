@@ -1,0 +1,321 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ParadiseAvenueMuslimCemetery.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ParadiseAvenueMuslimCemetery.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\AcrossEngland.jpg",
+      "PackagePath": "staticwebassets\\Theme\\img\\AcrossEngland.jpg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\Qabr.jpg",
+      "PackagePath": "staticwebassets\\Theme\\img\\Qabr.jpg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\Toolkitcemeterie.jpg",
+      "PackagePath": "staticwebassets\\Theme\\img\\Toolkitcemeterie.jpg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\downloadmuslims.jpeg",
+      "PackagePath": "staticwebassets\\Theme\\img\\downloadmuslims.jpeg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\funeral-memorial.jpg",
+      "PackagePath": "staticwebassets\\Theme\\img\\funeral-memorial.jpg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\grave-images.jpeg",
+      "PackagePath": "staticwebassets\\Theme\\img\\grave-images.jpeg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\image3s.jpeg",
+      "PackagePath": "staticwebassets\\Theme\\img\\image3s.jpeg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\images121.jpeg",
+      "PackagePath": "staticwebassets\\Theme\\img\\images121.jpeg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\jasabu_graveyard.jpg",
+      "PackagePath": "staticwebassets\\Theme\\img\\jasabu_graveyard.jpg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\logo-Ai.png",
+      "PackagePath": "staticwebassets\\Theme\\img\\logo-Ai.png"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\muslimgirl.avif",
+      "PackagePath": "staticwebassets\\Theme\\img\\muslimgirl.avif"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\sana.webp",
+      "PackagePath": "staticwebassets\\Theme\\img\\sana.webp"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\selgrave.jpg",
+      "PackagePath": "staticwebassets\\Theme\\img\\selgrave.jpg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\Theme\\img\\yusuf.jpeg",
+      "PackagePath": "staticwebassets\\Theme\\img\\yusuf.jpeg"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\Development\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\ParadiseAvenueMuslimCemetery\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ParadiseAvenueMuslimCemetery.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ParadiseAvenueMuslimCemetery.props",
+      "PackagePath": "build\\ParadiseAvenueMuslimCemetery.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ParadiseAvenueMuslimCemetery.props",
+      "PackagePath": "buildMultiTargeting\\ParadiseAvenueMuslimCemetery.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ParadiseAvenueMuslimCemetery.props",
+      "PackagePath": "buildTransitive\\ParadiseAvenueMuslimCemetery.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

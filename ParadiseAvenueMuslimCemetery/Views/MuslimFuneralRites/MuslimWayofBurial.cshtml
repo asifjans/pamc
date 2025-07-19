@@ -1,10 +1,74 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Muslim Way of Burial";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+<style>
+    .rules-container {
+        max-width: 1100px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 40px 50px;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        font-family: 'Segoe UI', sans-serif;
+    }
 
-<!-- Page Header Start -->
+    .rules-header {
+        background: linear-gradient(to right, #e67e22, #f39c12);
+        color: white;
+        padding: 20px 30px;
+        border-radius: 14px 14px 0 0;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .rules-section {
+        margin-bottom: 25px;
+    }
+
+        .rules-section h3 {
+            color: #d35400;
+            font-size: 22px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .rules-section p,
+        .rules-section li {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .rules-section ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+    .note-box {
+        background: #fff8e1;
+        border-left: 5px solid #f39c12;
+        padding: 15px 20px;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #7a6000;
+        border-radius: 8px;
+    }
+
+    blockquote {
+        font-style: italic;
+        background: #fef9f4;
+        border-left: 5px solid #e67e22;
+        padding: 15px 20px;
+        margin: 20px 0;
+        color: #555;
+    }
+</style>
+
 <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center">
         <h1 class="display-4 text-white animated slideInDown mb-4">About Us</h1>
@@ -17,97 +81,69 @@
         </nav>
     </div>
 </div>
-<!-- Page Header End -->
-<!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100 pt-5 pe-5" src="~/Theme/img/about-1.jpg" alt="" style="object-fit: cover;">
-                    <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="~/Theme/img/about-2.jpg" alt="" style="width: 200px; height: 200px;">
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="h-100">
-                    <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">About Us</div>
-                    <h1 class="display-6 mb-5">We Help People In Need Around The World</h1>
-                    <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
-                        <p class="text-dark mb-2">
-                            Paradise Avenue Muslim Cemetery, operated by the Connecticut Council of Masajid (CCM), is a sacred burial ground dedicated exclusively to Muslims in accordance with the Quran and Sunnah. Located in Hamden, CT, the cemetery serves the local Muslim community with dignity, compassion, and adherence to Islamic funeral rites and traditions.
 
-                        </p>
-                        <span class="text-primary">Jhon Doe, Founder</span>
-                    </div>
-                    <p class="mb-5">
-                        CCM is a registered 501(c)(3) non-profit organization committed to providing affordable, Shariah-compliant burial services. In addition to managing and maintaining the cemetery, CCM oversees burial arrangements, supports grieving families, and ensures that all practices honor the sanctity of the deceased and the values of Islam.
-                    </p>
-                    <a class="btn btn-primary py-2 px-3 me-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    <a class="btn btn-outline-primary py-2 px-3" href="">
-                        Contact Us
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+
+<div class="rules-container">
+    <div class="rules-header">Muslim Way of Burial</div>
+
+    <div class="rules-section">
+        <h3>Introduction</h3>
+        <p>In Islam, burial is a sacred and simple process emphasizing dignity, modesty, and return to Allah. It must be done as soon as possible after death following Islamic guidelines based on Quran and Sunnah.</p>
+    </div>
+
+    <div class="rules-section">
+        <h3>Step-by-Step Islamic Burial Procedure</h3>
+        <ol>
+            <li>
+                <strong>Confirm Death:</strong> When a Muslim dies, say <em>“Inna Lillahi wa inna ilayhi raji’un”</em> and inform family and the local Islamic center.
+            </li>
+            <li>
+                <strong>Ghusl (Ritual Washing):</strong> Wash the deceased (same gender preferred; spouse allowed). Use clean water and soap, followed by three full washes (or more if needed, odd number), ending with camphor (kāfūr).
+            </li>
+            <li>
+                <strong>Kafan (Shrouding):</strong>
+                <ul>
+                    <li>Men: 3 white cotton sheets</li>
+                    <li>Women: 5 pieces (including chest wrap and head cover)</li>
+                </ul>
+                Wrap the body tightly and modestly.
+            </li>
+            <li>
+                <strong>Salat al-Janazah (Funeral Prayer):</strong> Offer the Janazah prayer at the masjid, cemetery, or open area (see Janazah Prayer page).
+            </li>
+            <li>
+                <strong>Burial (Dafn):</strong>
+                <ul>
+                    <li>The grave should be perpendicular to the Qiblah.</li>
+                    <li>The body is placed on the right side, facing Qiblah.</li>
+                    <li>Use phrases like: <em>“Bismillahi wa ‘ala millati Rasoolillah”</em>.</li>
+                    <li>Men should lower male bodies; female bodies are ideally lowered by close female relatives.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Filling the Grave:</strong> After burial, cover the grave with soil completely, forming a small mound. Everyone may participate.
+            </li>
+            <li>
+                <strong>Supplication at the Grave:</strong> After burial, make du‘a for the deceased. Common supplication:
+                <blockquote>
+                    “O Allah, forgive him/her and grant them ease and peace in the grave, and make their final abode Jannah.”
+                </blockquote>
+            </li>
+        </ol>
+    </div>
+
+    <div class="rules-section">
+        <h3>Important Reminders</h3>
+        <ul>
+            <li>Do not delay the burial unnecessarily.</li>
+            <li>No extravagant coffins or tombs – simplicity is Sunnah.</li>
+            <li>Women may attend burial from a distance (according to many scholars).</li>
+            <li>No wailing, loud crying, or un-Islamic customs.</li>
+            <li>Recite Qur'an privately but not as a ritual requirement at the grave.</li>
+        </ul>
+    </div>
+
+    <div class="note-box">
+        <strong>Note:</strong> The Prophet ﷺ said, <em>"Break not the bones of your dead, for it is painful to them as it is to the living."</em> — So treat the deceased with the utmost respect and care.
     </div>
 </div>
-<!-- About End -->
-<!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
-            <h1 class="display-6 mb-5">Learn More What We Do And Get Involved</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
-                    <h4 class="mb-3">Child Education</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
-                    <h4 class="mb-3">Medical Treatment</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                    <h4 class="mb-3">Pure Drinking Water</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Service End -->

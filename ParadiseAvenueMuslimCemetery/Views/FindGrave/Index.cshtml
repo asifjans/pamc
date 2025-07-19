@@ -2,112 +2,562 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+@* <style>
+    .graveyard {
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(7, 142px);
+        gap: 12px;
+        justify-content: center;
+        background: linear-gradient(to top, #55cc8b, #70ac40, #7b9c4b);
+    }
 
+    .plot {
+        position: relative;
+        width: 150px;
+        height: 95px;
+        border-radius: 20px 20px 8px 8px; /* rounded top like tombstone */
+        background: linear-gradient(to bottom, #4CAF50, #3b9440); /* subtle gradient */
+        border: 2px solid #3e3e3e;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+        .plot.empty {
+            background: linear-gradient(to bottom, #ccc, #aaa);
+        }
+
+        .plot:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+        }
+
+    .plot-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        z-index: 1;
+        font-size: 16px;
+        color: #fff;
+        text-shadow: 0 1px 2px #000;
+    }
+
+    .plot-info {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.88);
+        color: #fff;
+        font-size: 13px;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: bottom 0.4s ease;
+        z-index: 2;
+        text-align: left;
+    }
+
+    .plot:hover .plot-info {
+        bottom: 0;
+    }
+</style>
+ *@
+<style>
+    /* * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Arial', sans-serif;
+                background: #f0f0f0;
+                overflow: hidden;
+            }
+     */
+    .map-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(45deg, #8FBC8F 0%, #98FB98 20%, #90EE90 40%, #7CFC00 60%, #ADFF2F 80%, #9ACD32 100% );
+    }
+
+    /* Grass texture overlay */
+    .grass-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(circle at 20% 30%, rgba(60, 120, 60, 0.3) 1px, transparent 1px), radial-gradient(circle at 80% 70%, rgba(40, 100, 40, 0.2) 1px, transparent 1px), radial-gradient(circle at 40% 90%, rgba(70, 140, 70, 0.25) 1px, transparent 1px);
+        background-size: 15px 15px, 20px 20px, 25px 25px;
+        opacity: 0.6;
+    }
+
+    .map-controls {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .control-panel {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 15px;
+        min-width: 200px;
+    }
+
+    .zoom-controls {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .zoom-btn {
+        width: 40px;
+        height: 40px;
+        background: white;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background 0.2s;
+    }
+
+        .zoom-btn:hover {
+            background: #f0f0f0;
+        }
+
+    .legend {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 15px;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+    }
+
+        .legend h3 {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .legend-color {
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+    }
+
+    .graveyard-grid {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: grid;
+        grid-template-columns: repeat(7, 80px);
+        grid-template-rows: repeat(7, 60px);
+        gap: 8px;
+        padding: 40px;
+    }
+
+    .plot {
+        position: relative;
+        border-radius: 8px;
+        border: 2px solid rgba(255,255,255,0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+        .plot.occupied {
+            background: rgba(139, 69, 19, 0.8);
+            border-color: #8B4513;
+        }
+
+        .plot.available {
+            background: rgba(144, 238, 144, 0.8);
+            border-color: #90EE90;
+        }
+
+        .plot:hover {
+            transform: scale(1.1);
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+    .plot-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 11px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    }
+
+    .tooltip {
+        position: absolute;
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.9);
+        color: white;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        line-height: 1.4;
+        min-width: 200px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: rgba(0,0,0,0.9);
+        }
+
+    .plot:hover .tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .path {
+        position: absolute;
+        background: rgba(160, 160, 160, 0.7);
+        border-radius: 2px;
+    }
+
+        .path.horizontal {
+            height: 15px;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .path.vertical {
+            width: 15px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    .main-path {
+        position: absolute;
+        background: rgba(120, 120, 120, 0.8);
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .search-box {
+        margin-bottom: 10px;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+    .stats {
+        font-size: 12px;
+        color: #666;
+    }
+
+    .stats-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3px;
+    }
+
+    /* Trees scattered around */
+    .tree {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, #228B22, #006400);
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .tree1 {
+        top: 15%;
+        left: 10%;
+    }
+
+    .tree2 {
+        top: 25%;
+        right: 15%;
+    }
+
+    .tree3 {
+        bottom: 20%;
+        left: 20%;
+    }
+
+    .tree4 {
+        bottom: 30%;
+        right: 25%;
+    }
+
+    .tree5 {
+        top: 60%;
+        left: 5%;
+    }
+
+    .tree6 {
+        top: 70%;
+        right: 8%;
+    }
+
+    @@media (max-width: 768px) {
+        .graveyard-grid {
+            grid-template-columns: repeat(7, 50px);
+            grid-template-rows: repeat(7, 40px);
+            gap: 5px;
+        }
+
+        .plot-label {
+            font-size: 9px;
+        }
+
+        .control-panel {
+            min-width: 150px;
+            padding: 10px;
+        }
+    }
+</style>
 
 <!-- Page Header Start -->
 <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center">
-        <h1 class="display-4 text-white animated slideInDown mb-4">About Us</h1>
+        <h1 class="display-4 text-white animated slideInDown mb-4">Graveyard Map</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0">
                 <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                 <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                <li class="breadcrumb-item text-primary active" aria-current="page">About Us</li>
+                <li class="breadcrumb-item text-primary active" aria-current="page">Graveyard Map</li>
             </ol>
         </nav>
     </div>
 </div>
-<!-- Page Header End -->
-<!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100 pt-5 pe-5" src="~/Theme/img/about-1.jpg" alt="" style="object-fit: cover;">
-                    <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="~/Theme/img/about-2.jpg" alt="" style="width: 200px; height: 200px;">
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="h-100">
-                    <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">About Us</div>
-                    <h1 class="display-6 mb-5">We Help People In Need Around The World</h1>
-                    <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
-                        <p class="text-dark mb-2">
-                            Paradise Avenue Muslim Cemetery, operated by the Connecticut Council of Masajid (CCM), is a sacred burial ground dedicated exclusively to Muslims in accordance with the Quran and Sunnah. Located in Hamden, CT, the cemetery serves the local Muslim community with dignity, compassion, and adherence to Islamic funeral rites and traditions.
+<div class="map-container">
+    <div class="grass-overlay"></div>
 
-                        </p>
-                        <span class="text-primary">Jhon Doe, Founder</span>
-                    </div>
-                    <p class="mb-5">
-                        CCM is a registered 501(c)(3) non-profit organization committed to providing affordable, Shariah-compliant burial services. In addition to managing and maintaining the cemetery, CCM oversees burial arrangements, supports grieving families, and ensures that all practices honor the sanctity of the deceased and the values of Islam.
-                    </p>
-                    <a class="btn btn-primary py-2 px-3 me-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    <a class="btn btn-outline-primary py-2 px-3" href="">
-                        Contact Us
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
+    <!-- Trees -->
+    <div class="tree tree1"></div>
+    <div class="tree tree2"></div>
+    <div class="tree tree3"></div>
+    <div class="tree tree4"></div>
+    <div class="tree tree5"></div>
+    <div class="tree tree6"></div>
+
+    <!-- Main pathways -->
+    <div class="main-path" style="top: 48%; left: 0; width: 100%; height: 25px;"></div>
+    <div class="main-path" style="left: 48%; top: 0; height: 100%; width: 25px;"></div>
+
+    <!-- Controls -->
+    <div class="map-controls">
+        <div class="control-panel">
+            <h3 style="margin-bottom: 10px; font-size: 16px;">Memorial Park</h3>
+            <div class="search-box">
+                <input type="text" id="searchBox" placeholder="Search by name..." oninput="searchPlot(this.value)">
+            </div>
+            <div class="stats">
+                <div class="stats-item">
+                    <span>Total Plots:</span>
+                    <span>49</span>
+                </div>
+                <div class="stats-item">
+                    <span>Occupied:</span>
+                    <span id="occupiedCount">7</span>
+                </div>
+                <div class="stats-item">
+                    <span>Available:</span>
+                    <span id="availableCount">42</span>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- About End -->
-<!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
-            <h1 class="display-6 mb-5">Learn More What We Do And Get Involved</h1>
+
+    <div class="zoom-controls">
+        <button class="zoom-btn" onclick="zoomIn()">+</button>
+        <button class="zoom-btn" onclick="zoomOut()">−</button>
+    </div>
+
+    <div class="legend">
+        <h3>Legend</h3>
+        <div class="legend-item">
+            <div class="legend-color" style="background: rgba(139, 69, 19, 0.8);"></div>
+            <span>Occupied Plot</span>
         </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
-                    <h4 class="mb-3">Child Education</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
-                    <h4 class="mb-3">Medical Treatment</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                    <h4 class="mb-3">Pure Drinking Water</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: rgba(144, 238, 144, 0.8);"></div>
+            <span>Available Plot</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: rgba(120, 120, 120, 0.8);"></div>
+            <span>Walkway</span>
         </div>
     </div>
+
+    <div class="graveyard-grid" id="graveyardGrid">
+        <!-- Plots will be generated by JavaScript -->
+    </div>
 </div>
-<!-- Service End -->
+
+<script>
+    // Sample data
+    const plotData = {
+        'A1': { name: 'Ahmed', father: 'Yousuf Khan', dob: '1950-04-12', dod: '2023-05-10' },
+        'A3': { name: 'Fatima', father: 'Hassan Ali', dob: '1965-11-03', dod: '2021-08-22' },
+        'B2': { name: 'Imran', father: 'Nasir Qureshi', dob: '1944-03-14', dod: '2010-12-01' },
+        'B7': { name: 'Nabila', father: 'Arshad Usman', dob: '1958-03-05', dod: '2018-08-14' },
+        'C4': { name: 'Rashid', father: 'Jamil', dob: '1940-10-20', dod: '2015-02-11' },
+        'D5': { name: 'Khalida', father: 'Ahmed', dob: '1930-12-01', dod: '2023-01-07' },
+        'E6': { name: 'Salman Javed', father: 'Javed', dob: '1971-08-08', dod: '2022-09-30' },
+        'F7': { name: 'Samina', father: 'Tariq', dob: '1962-01-15', dod: '2019-03-12' }
+    };
+
+    let currentZoom = 1;
+
+    function formatDate(dateStr) {
+        const date = new Date(dateStr);
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    }
+
+    function createPlot(row, col) {
+        const plotId = `${row}${col}`;
+        const plotElement = document.createElement('div');
+
+        if (plotData[plotId]) {
+            plotElement.className = 'plot occupied';
+            const person = plotData[plotId];
+
+            plotElement.innerHTML = `
+                <div class="plot-label">${plotId}</div>
+                <div class="tooltip">
+                    <strong>${person.name}</strong><br>
+                    <small>Father: ${person.father}</small><br>
+                    <small>Born: ${formatDate(person.dob)}</small><br>
+                    <small>Passed: ${formatDate(person.dod)}</small>
+                </div>
+            `;
+        } else {
+            plotElement.className = 'plot available';
+            plotElement.innerHTML = `
+                <div class="plot-label">${plotId}</div>
+                <div class="tooltip">
+                    <strong>Plot ${plotId}</strong><br>
+                    <small>Status: Available</small><br>
+                    <small>Ready for reservation</small>
+                </div>
+            `;
+        }
+
+        return plotElement;
+    }
+
+    function generateGraveyard() {
+        const graveyard = document.getElementById('graveyardGrid');
+        const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+
+        for (const row of rows) {
+            for (let col = 1; col <= 7; col++) {
+                const plot = createPlot(row, col);
+                graveyard.appendChild(plot);
+            }
+        }
+    }
+
+    function searchPlot(searchTerm) {
+        const plots = document.querySelectorAll('.plot');
+        plots.forEach(plot => {
+            const tooltip = plot.querySelector('.tooltip');
+            const text = tooltip.textContent.toLowerCase();
+            const matches = text.includes(searchTerm.toLowerCase());
+
+            if (searchTerm === '' || matches) {
+                plot.style.opacity = '1';
+                plot.style.filter = 'none';
+            } else {
+                plot.style.opacity = '0.3';
+                plot.style.filter = 'blur(1px)';
+            }
+
+            if (matches && searchTerm !== '') {
+                plot.style.boxShadow = '0 0 20px #ff6b35';
+                plot.style.transform = 'scale(1.2)';
+                plot.style.zIndex = '200';
+            } else {
+                plot.style.boxShadow = '';
+                plot.style.transform = '';
+                plot.style.zIndex = '';
+            }
+        });
+    }
+
+    function zoomIn() {
+        currentZoom = Math.min(currentZoom * 1.2, 3);
+        updateZoom();
+    }
+
+    function zoomOut() {
+        currentZoom = Math.max(currentZoom / 1.2, 0.5);
+        updateZoom();
+    }
+
+    function updateZoom() {
+        const grid = document.getElementById('graveyardGrid');
+        grid.style.transform = `translate(-50%, -50%) scale(${currentZoom})`;
+    }
+
+    // Initialize
+    generateGraveyard();
+</script>
+

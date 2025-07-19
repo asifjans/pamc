@@ -1,113 +1,165 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Committees";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+
+<style>
+   
+    .committees-wrapper {
+        padding: 60px 20px;
+        background: linear-gradient(to right bottom, #fff3e0, #ffe5b4);
+   }
+
+    .committees-container {
+        max-width: 1140px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #e67e22;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+        font-size: 18px;
+        color: #666;
+        text-align: center;
+        margin-bottom: 40px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .committees-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+
+    .committee-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 25px 20px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-left: 6px solid #f39c12;
+    }
+
+        .committee-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
+        }
+
+        .committee-card h3 {
+            font-size: 20px;
+            color: #d35400;
+            margin-bottom: 12px;
+        }
+
+        .committee-card p {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+    .join-box {
+        margin-top: 50px;
+        background: #fff8e1;
+        border-left: 6px solid #f39c12;
+        padding: 20px 25px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 16px;
+        color: #7a6000;
+    }
+
+        .join-box a {
+            color: #d35400;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+  /*   /* Header Section */
+   /*  .page-header {
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+        .page-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        } */ */
+
+  /*   .breadcrumb {
+        background: transparent;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+        .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+            color: #fff;
+        }
+
+        .breadcrumb .breadcrumb-item a,
+        .breadcrumb .breadcrumb-item.active {
+            color: #fff;
+        } */
+</style>
 
 
 <!-- Page Header Start -->
 <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center">
-        <h1 class="display-4 text-white animated slideInDown mb-4">About Us</h1>
+        <h1 class="display-4 text-white animated slideInDown mb-4">Our Committees</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb justify-content-center mb-0">
                 <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                 <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                <li class="breadcrumb-item text-primary active" aria-current="page">About Us</li>
+                <li class="breadcrumb-item text-primary active" aria-current="page">Committees</li>
             </ol>
         </nav>
     </div>
 </div>
-<!-- Page Header End -->
-<!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100 pt-5 pe-5" src="~/Theme/img/about-1.jpg" alt="" style="object-fit: cover;">
-                    <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="~/Theme/img/about-2.jpg" alt="" style="width: 200px; height: 200px;">
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="h-100">
-                    <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">About Us</div>
-                    <h1 class="display-6 mb-5">We Help People In Need Around The World</h1>
-                    <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
-                        <p class="text-dark mb-2">
-                            Paradise Avenue Muslim Cemetery, operated by the Connecticut Council of Masajid (CCM), is a sacred burial ground dedicated exclusively to Muslims in accordance with the Quran and Sunnah. Located in Hamden, CT, the cemetery serves the local Muslim community with dignity, compassion, and adherence to Islamic funeral rites and traditions.
 
-                        </p>
-                        <span class="text-primary">Jhon Doe, Founder</span>
-                    </div>
-                    <p class="mb-5">
-                        CCM is a registered 501(c)(3) non-profit organization committed to providing affordable, Shariah-compliant burial services. In addition to managing and maintaining the cemetery, CCM oversees burial arrangements, supports grieving families, and ensures that all practices honor the sanctity of the deceased and the values of Islam.
-                    </p>
-                    <a class="btn btn-primary py-2 px-3 me-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    <a class="btn btn-outline-primary py-2 px-3" href="">
-                        Contact Us
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
+
+<div class="committees-wrapper">
+    <div class="committees-container">
+        <h2 class="section-title">Serving with Sincerity</h2>
+        <p class="section-subtitle">
+            Our cemetery operations are supported by dedicated volunteer committees. Each plays a vital role in preserving the sanctity and service of Paradise Avenue Muslim Cemetery.
+        </p>
+
+        <div class="committees-grid">
+            <div class="committee-card">
+                <h3>1. Cemetery Management Committee</h3>
+                <p>Manages burial requests, scheduling, compliance, and ensures Islamic guidelines are followed in all operations.</p>
             </div>
+
+            <div class="committee-card">
+                <h3>2. Maintenance & Grounds Committee</h3>
+                <p>Maintains the beauty and safety of cemetery grounds including landscaping, repairs, and upkeep.</p>
+            </div>
+
+            <div class="committee-card">
+                <h3>3. Religious Affairs Committee</h3>
+                <p>Provides Islamic guidance for burials, oversees Janazah procedures, and supports grieving families spiritually.</p>
+            </div>
+
+            <div class="committee-card">
+                <h3>4. Outreach & Fundraising Committee</h3>
+                <p>Raises community awareness, manages donations, and organizes charity efforts to sustain cemetery services.</p>
+            </div>
+        </div>
+
+        <div class="join-box">
+            <strong>Interested in helping?</strong> Join one of our committees and earn continuous rewards (Sadaqah Jariyah). <a href="#contact">Get in touch here</a>.
         </div>
     </div>
 </div>
-<!-- About End -->
-<!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
-            <h1 class="display-6 mb-5">Learn More What We Do And Get Involved</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
-                    <h4 class="mb-3">Child Education</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
-                    <h4 class="mb-3">Medical Treatment</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                    <h4 class="mb-3">Pure Drinking Water</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Service End -->
+

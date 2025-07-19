@@ -1,10 +1,74 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "How to Pray Janazah Prayer";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+<style>
+    .rules-container {
+        max-width: 1100px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 40px 50px;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        font-family: 'Segoe UI', sans-serif;
+    }
 
-<!-- Page Header Start -->
+    .rules-header {
+        background: linear-gradient(to right, #e67e22, #f39c12);
+        color: white;
+        padding: 20px 30px;
+        border-radius: 14px 14px 0 0;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .rules-section {
+        margin-bottom: 25px;
+    }
+
+        .rules-section h3 {
+            color: #d35400;
+            font-size: 22px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .rules-section p,
+        .rules-section li {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .rules-section ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+    .note-box {
+        background: #fff8e1;
+        border-left: 5px solid #f39c12;
+        padding: 15px 20px;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #7a6000;
+        border-radius: 8px;
+    }
+
+    blockquote {
+        font-style: italic;
+        background: #fef9f4;
+        border-left: 5px solid #e67e22;
+        padding: 15px 20px;
+        margin: 20px 0;
+        color: #555;
+    }
+</style>
+
 <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center">
         <h1 class="display-4 text-white animated slideInDown mb-4">About Us</h1>
@@ -17,97 +81,79 @@
         </nav>
     </div>
 </div>
-<!-- Page Header End -->
-<!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100 pt-5 pe-5" src="~/Theme/img/about-1.jpg" alt="" style="object-fit: cover;">
-                    <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="~/Theme/img/about-2.jpg" alt="" style="width: 200px; height: 200px;">
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="h-100">
-                    <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">About Us</div>
-                    <h1 class="display-6 mb-5">We Help People In Need Around The World</h1>
-                    <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
-                        <p class="text-dark mb-2">
-                            Paradise Avenue Muslim Cemetery, operated by the Connecticut Council of Masajid (CCM), is a sacred burial ground dedicated exclusively to Muslims in accordance with the Quran and Sunnah. Located in Hamden, CT, the cemetery serves the local Muslim community with dignity, compassion, and adherence to Islamic funeral rites and traditions.
 
-                        </p>
-                        <span class="text-primary">Jhon Doe, Founder</span>
-                    </div>
-                    <p class="mb-5">
-                        CCM is a registered 501(c)(3) non-profit organization committed to providing affordable, Shariah-compliant burial services. In addition to managing and maintaining the cemetery, CCM oversees burial arrangements, supports grieving families, and ensures that all practices honor the sanctity of the deceased and the values of Islam.
-                    </p>
-                    <a class="btn btn-primary py-2 px-3 me-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    <a class="btn btn-outline-primary py-2 px-3" href="">
-                        Contact Us
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+
+
+<div class="rules-container">
+    <div class="rules-header">How to Pray Janazah Prayer</div>
+
+    <div class="rules-section">
+        <h3>What is Janazah Prayer?</h3>
+        <p>The Janazah (funeral) prayer is a collective obligation (<strong>Fard Kifayah</strong>) for Muslims. It is a prayer without rukū‘ (bowing) or sujūd (prostration) and is performed standing. It is offered to seek forgiveness for the deceased Muslim.</p>
+    </div>
+
+    <div class="rules-section">
+        <h3>Conditions for Janazah Prayer</h3>
+        <ul>
+            <li>The deceased must be a Muslim.</li>
+            <li>The body must be washed, shrouded, and placed in front of the congregation.</li>
+            <li>The congregation must face the Qiblah.</li>
+            <li>Performed preferably in congregation.</li>
+            <li>No wudu = no participation (must be in a state of purity).</li>
+        </ul>
+    </div>
+
+    <div class="rules-section">
+        <h3>Structure of Janazah Prayer</h3>
+        <p>The Janazah prayer consists of four <strong>Takbeerat</strong> (saying “Allahu Akbar”), standing only, and no physical movements.</p>
+        <ol>
+            <li>
+                <strong>First Takbeer:</strong> Raise hands and say <strong>“Allahu Akbar”</strong>.
+                <br>Recite <strong>Surah Al-Fatiha</strong> silently.
+            </li>
+            <li>
+                <strong>Second Takbeer:</strong> Say <strong>“Allahu Akbar”</strong>.
+                <br>Recite <strong>Salawat (Durood Ibrahim)</strong>:
+                <br>اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ...
+            </li>
+            <li>
+                <strong>Third Takbeer:</strong> Say <strong>“Allahu Akbar”</strong>.
+                <br>Make <strong>Du‘a for the deceased</strong>. One common supplication:
+                <blockquote>
+                    اللَّهُمَّ اغْفِرْ لِحَيِّنَا وَمَيِّتِنَا... وَمَنْ أَحْيَيْتَهُ مِنَّا فَأَحْيِهِ عَلَى الْإِسْلَامِ
+                </blockquote>
+            </li>
+            <li>
+                <strong>Fourth Takbeer:</strong> Say <strong>“Allahu Akbar”</strong>.
+                <br>You may make a short silent du‘a.
+            </li>
+            <li>
+                <strong>End the prayer</strong> with one or two Tasleem (salutation) saying:
+                <br><strong>“As-salaamu ‘alaykum wa rahmatullah”</strong> turning your head to the right.
+            </li>
+        </ol>
+    </div>
+
+    <div class="rules-section">
+        <h3>Placement of the Body</h3>
+        <ul>
+            <li>If the deceased is a man, the Imam stands near the head of the body.</li>
+            <li>If the deceased is a woman, the Imam stands near the middle of the body.</li>
+            <li>Multiple bodies: place men closest to the Imam, women behind.</li>
+        </ul>
+    </div>
+
+    <div class="rules-section">
+        <h3>Important Sunnah Etiquettes</h3>
+        <ul>
+            <li>Be in a state of Wudu and cleanliness.</li>
+            <li>Keep your heart present and sincere when making Du‘a.</li>
+            <li>Maintain silence during the prayer (no talking, cell phones, etc.).</li>
+            <li>Attend the Janazah with the intention of reward and support for the deceased.</li>
+        </ul>
+    </div>
+
+    <div class="note-box">
+        <strong>Note:</strong> Janazah prayer is a mercy for the deceased. The more Muslims who attend and sincerely pray, the greater the reward for the deceased and the attendees.
     </div>
 </div>
-<!-- About End -->
-<!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
-            <h1 class="display-6 mb-5">Learn More What We Do And Get Involved</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
-                    <h4 class="mb-3">Child Education</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
-                    <h4 class="mb-3">Medical Treatment</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                    <h4 class="mb-3">Pure Drinking Water</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Service End -->

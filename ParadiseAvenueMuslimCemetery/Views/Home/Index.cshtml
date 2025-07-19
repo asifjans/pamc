@@ -99,71 +99,81 @@
     }
 </style>
 <style>
-    .graveyard {
-        padding: 40px 0;
-        display: grid;
-        grid-template-columns: repeat(7, 142px);
-        gap: 12px;
-        justify-content: center;
-        background: linear-gradient(to top, #55cc8b, #70ac40, #7b9c4b);
+    .rules-section {
+        background-color: #fff8f0;
+        padding: 60px 20px;
+        color: #333;
+        text-align: center;
     }
 
-    .plot {
-        position: relative;
-        width: 150px;
-        height: 95px;
-        border-radius: 20px 20px 8px 8px; /* rounded top like tombstone */
-        background: linear-gradient(to bottom, #4CAF50, #3b9440); /* subtle gradient */
-        border: 2px solid #3e3e3e;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        transition: transform 0.3s, box-shadow 0.3s;
-        cursor: pointer;
-    }
-
-        .plot.empty {
-            background: linear-gradient(to bottom, #ccc, #aaa);
+        .rules-section h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #e2701d; /* Deep orange */
+            margin-bottom: 10px;
         }
 
-        .plot:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+        .rules-section p.intro {
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            color: #555;
         }
 
-    .plot-label {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
+    .rules-cards {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        z-index: 1;
-        font-size: 16px;
-        color: #fff;
-        text-shadow: 0 1px 2px #000;
+        gap: 20px;
     }
 
-    .plot-info {
-        position: absolute;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.88);
-        color: #fff;
-        font-size: 13px;
-        padding: 10px;
-        box-sizing: border-box;
-        transition: bottom 0.4s ease;
-        z-index: 2;
+    .rule-card {
+        background-color: white;
+        color: #333;
+        border-left: 5px solid #e2701d;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
         text-align: left;
+        transition: transform 0.3s;
     }
 
-    .plot:hover .plot-info {
-        bottom: 0;
+        .rule-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .rule-card h4 {
+            color: #e2701d;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .rule-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+    .rules-section a.download-link {
+        display: inline-block;
+        margin-top: 40px;
+        background: #e2701d;
+        color: white;
+        font-weight: bold;
+        padding: 10px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+
+        .rules-section a.download-link:hover {
+            background: #c35e12;
+        }
+
+    .img-height{
+        height:271px !important;
     }
 </style>
 
@@ -298,7 +308,7 @@
 @* <div class="container-xxl py-5 memorial-section">
     <div class="container"> *@
 
-        <div class="graveyard">
+@*         <div class="graveyard">
             <!-- 7x7 = 49 plots -->
             <!-- We'll just mark a few as occupied for demo, the rest as empty -->
             <!-- Row A -->
@@ -430,7 +440,7 @@
             <div class="plot empty"><div class="plot-label">G6</div></div>
             <div class="plot empty"><div class="plot-label">G7</div></div>
         </div>
-  @*   </div>
+ *@  @*   </div>
 </div> *@
 
 <!-- About Start -->
@@ -439,8 +449,8 @@
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100 pt-5 pe-5" src="~/Theme/img/about-1.jpg" alt="" style="object-fit: cover;">
-                    <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="~/Theme/img/about-2.jpg" alt="" style="width: 200px; height: 200px;">
+                    <img class="position-absolute w-100 h-100 pt-5 pe-5" src="~/Theme/img/cementry.png" alt="" style="object-fit: cover;">
+                    <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="~/Theme/img/imageparadise.png" alt="" style="width: 200px; height: 200px;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -500,7 +510,7 @@
                         
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="~/Theme/img/courses-1.jpg" alt="">
+                        <img class="img-fluid img-height" src="~/Theme/img/check.jpeg" alt="">
                         <div class="causes-overlay">
                             <a class="btn btn-outline-primary" href="">
                                 Read More
@@ -525,7 +535,7 @@
                         
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="~/Theme/img/courses-2.jpg" alt="">
+                        <img class="img-fluid img-height" src="~/Theme/img/istockphoto.jpg" alt="">
                         <div class="causes-overlay">
                             <a class="btn btn-outline-primary" href="">
                                 Read More
@@ -548,7 +558,7 @@
                         
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="~/Theme/img/courses-3.jpg" alt="">
+                        <img class="img-fluid img-height" src="~/Theme/img/SNOWYIMAGE.jpeg" alt="">
                         <div class="causes-overlay">
                             <a class="btn btn-outline-primary" href="">
                                 Read More
@@ -564,16 +574,17 @@
     </div>
 </div>
 
+
 <div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="~/Theme/img/carousel-2.jpg">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                 <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Donate Now</div>
-                <h1 class="display-6 text-white mb-5">Thanks For The Results Achieved With You</h1>
+                <h1 class="display-6 text-white mb-5">Your generous donations help maintain the cleanliness, dignity, and ongoing care of the cemetery.</h1>
                 <p class="text-white-50 mb-0">
-                    Your generous donations help maintain the cleanliness, dignity, and ongoing care of the cemetery. Support this noble cause by contributing today—may Allah (SWT) reward you abundantly.
-
+                    “Whoever digs a grave for a deceased person and buries him, will receive the reward of giving him a place to reside in until the Day of Judgment.”
                 </p>
+                <p style="font:bold; text-align:center; color:white">(Saheeh al-Targheeb 3492 – Graded Saheeh by Al-Albaani)</p>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <div class="h-100 bg-white p-5">
@@ -617,11 +628,57 @@
             </div>
         </div>
     </div>
-</div>
-<!-- Donate End -->
+</div><!-- Donate End -->
 <!-- Team Start -->
 
+<section class="rules-section">
+    <h2>Rules & Regulations</h2>
+    <p class="intro">To maintain the sanctity of the cemetery, we ask all visitors and families to follow these essential guidelines established by the Connecticut Council of Masajid (CCM).</p>
+
+    <div class="rules-cards">
+        <div class="rule-card">
+            <h4>Request a Grave Site</h4>
+            <p>
+                To request a grave, submit the online form or meet a CCM representative with the completed form and deceased’s details.
+            </p>
+        </div>
+        <div class="rule-card">
+            <h4>
+                Burial Notice Requirement
+            </h4>
+            <p>Notice of at least twenty four (24) hours, before the announced burial time, will be required for digging arrangements.</p>
+        </div>
+        <div class="rule-card">
+            <h4>Daylight Burials Only</h4>
+            <p>All burials must occur during daylight hours. The cemetery does not have lighting facilities.</p>
+        </div>
+
+        <div class="rule-card">
+            <h4>Grave Structure</h4>
+            <p>No raised structures, tombs, fences, or decorations are permitted. Only flat markers if authorized.</p>
+        </div>
+
+        <div class="rule-card">
+            <h4>Next Plot in Line</h4>
+            <p>Plots are assigned in sequence. No pre-selection or reservations are allowed for future use.</p>
+        </div>
+
+        <div class="rule-card">
+            <h4>Clean & Respectful</h4>
+            <p>Vehicles must park in designated areas. No littering, loud noise, or inappropriate behavior is allowed.</p>
+        </div>
+
+        <div class="rule-card">
+            <h4>No Alterations</h4>
+            <p>Graves cannot be altered. Any work must be pre-approved by the CCM administration.</p>
+        </div>
+    </div>
+
+    @*     <a class="download-link" href="/documents/rules">Download Full Rules (PDF)</a>
+    *@
+</section>
 <!-- Team End -->
+
 <!-- Testimonial Start -->
 <div class="container-xxl py-5">
     <div class="container">

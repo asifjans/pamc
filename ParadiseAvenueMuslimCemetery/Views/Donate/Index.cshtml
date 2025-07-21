@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ParadiseAvenueMuslimCemetery.Models.Email
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
@@ -33,11 +34,45 @@
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <div class="h-100 bg-white p-5">
-                    <form>
+
+                    @using (Html.BeginForm("Index", "Donate", FormMethod.Post))
+                    {
+                        <div class="form-group mb-3">
+                            @Html.LabelFor(m => m.Name)
+                            @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @class = "form-control bg-light border-0", placeholder = "Your Name" } })
+                            @Html.ValidationMessageFor(m => m.Name)
+                        </div>
+
+                        <div class="form-group mb-3">
+                            @Html.LabelFor(m => m.EmailAddress)
+                            @Html.EditorFor(m => m.EmailAddress, new { htmlAttributes = new { @class = "form-control bg-light border-0", placeholder = "Your Email" } })
+                            @Html.ValidationMessageFor(m => m.EmailAddress)
+                        </div>
+
+                        <div class="form-group mb-3">
+                            @Html.Label("Donation Amount")
+                            <div class="btn-group d-flex justify-content-around">
+                                @foreach (var amount in new[] { 10, 20, 30 })
+                                {
+                                    <label class="btn btn-light py-3">
+                                        <input type="radio" name="Amount" value="@amount" @(amount == 10 ? "checked" : "") /> $@amount
+                                    </label>
+                                }
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary px-5" style="height: 60px;">
+                            Donate Now
+                            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </button>
+                    }
+@*                     <form asp-controller="Donate" asp-action="Index" method="post">
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control bg-light border-0" id="Name" placeholder="Your Name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
@@ -69,7 +104,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+ *@                </div>
             </div>
         </div>
     </div>

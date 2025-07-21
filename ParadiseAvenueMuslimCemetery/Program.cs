@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Identity.UI.Services;
+using ParadiseAvenueMuslimCemetery;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddTransient<ParadiseAvenueMuslimCemetery.IEmailSender, ParadiseAvenueMuslimCemetery.EmailSender>();
 
 // Add services to the container. //  t5ss
 builder.Services.AddControllersWithViews();

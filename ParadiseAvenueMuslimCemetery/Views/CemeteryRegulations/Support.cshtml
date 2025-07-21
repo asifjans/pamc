@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "Support";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<style>
+    .guidance-container {
+        max-width: 900px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 40px 50px;
+        border-radius: 14px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .guidance-header {
+        background: linear-gradient(to right, #e67e22, #f39c12);
+        color: white;
+        padding: 20px 30px;
+        border-radius: 12px 12px 0 0;
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .guidance-section {
+        margin-bottom: 25px;
+    }
+
+        .guidance-section h3 {
+            color: #1b5e20;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .guidance-section p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .guidance-section ul {
+            padding-left: 20px;
+            color: #444;
+        }
+
+            .guidance-section ul li {
+                margin-bottom: 8px;
+            }
+
+    .support-quote {
+        background: #e8f5e9;
+        border-left: 5px solid #2e7d32;
+        padding: 15px 20px;
+        margin-top: 20px;
+        font-size: 15px;
+        color: #2e7d32;
+        border-radius: 6px;
+        font-style: italic;
+    }
+
+    .donate-button {
+        display: inline-block;
+        background: #e67e22;
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 25px;
+    }
+
+</style>
+
+<!-- Header -->
+<div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <h1 class="display-4 text-white animated slideInDown mb-4">Support Us</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+                <li class="breadcrumb-item text-primary active" aria-current="page">Support</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- Support Content -->
+<div class="guidance-container">
+    <div class="guidance-header">Support Paradise Avenue Muslim Cemetery</div>
+
+    <div class="guidance-section">
+        <p>
+            Paradise Avenue Muslim Cemetery is owned and operated by the Connecticut Council of Masajid (CCM), a nonprofit 501(c)(3) organization.
+            Maintaining this sacred space is a collective responsibility grounded in Islamic values of dignity, respect, and care for the deceased.
+        </p>
+    </div>
+
+    <div class="guidance-section">
+        <h3>Your Support is Sadaqah Jaariyah</h3>
+        <p>
+            Donations toward the cemetery are a form of <strong>Sadaqah Jaariyah</strong> (ongoing charity). The Prophet Muhammad ﷺ said:
+        </p>
+        <div class="support-quote">
+            “Whoever digs a grave for a deceased person and buries him, will receive the reward of giving him a place to reside in until the Day of Judgment.”<br />
+            <small>(Saheeh al-Targheeb 3492 – Graded Saheeh by Al-Albaani)</small>
+        </div>
+    </div>
+
+    <div class="guidance-section">
+        <h3>How Your Donations Help</h3>
+        <ul>
+            <li>Grave maintenance and landscaping</li>
+            <li>Water stations and signage</li>
+            <li>Pathways and cleanliness</li>
+            <li>Winter snow clearing and seasonal upkeep</li>
+        </ul>
+        <p>With your help, we maintain this sacred land for generations of Muslims to come.</p>
+    </div>
+
+    <div class="guidance-section">
+        <h3>Ways to Donate</h3>
+        <p><strong>All donations should be made directly to CCM — not through third parties.</strong></p>
+        <ul>
+            <li><strong>By Mail:</strong> 698 Newhall Street, Hamden, CT 06517</li>
+            <li><strong>Phone:</strong> (203) 562-2757</li>
+            <li><strong>Cemetery Address:</strong> 1105 Paradise Avenue, Hamden, CT 06514</li>
+        </ul>
+        <a class="donate-button" href="/Donate">Donate Now</a>
+    </div>
+</div>

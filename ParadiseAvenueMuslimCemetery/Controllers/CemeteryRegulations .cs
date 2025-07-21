@@ -8,5 +8,10 @@ namespace ParadiseAvenueMuslimCemetery.Controllers
         {
             return View();
         }
+
+        public IActionResult Support()
+        {
+            return View();
+        }
     }
 }

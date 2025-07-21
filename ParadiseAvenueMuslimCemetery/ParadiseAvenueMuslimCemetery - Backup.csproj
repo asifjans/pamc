@@ -26,7 +26,7 @@
     <Content Remove="wwwroot\Theme\css\style.css" />
     <Content Remove="wwwroot\Theme\donate.html" />
     <Content Remove="wwwroot\Theme\free-nonprofit-website-template.jpg" />
-    <Content Remove="wwwroot\Theme\img\about-1.png" />
+    <Content Remove="wwwroot\Theme\img\about-1.pngpng" />
     <Content Remove="wwwroot\Theme\img\about-2.jpg" />
     <Content Remove="wwwroot\Theme\img\carousel-1.jpg" />
     <Content Remove="wwwroot\Theme\img\carousel-2.jpg" />
@@ -163,7 +163,7 @@
     <None Include="wwwroot\Theme\css\style.css" />
     <None Include="wwwroot\Theme\donate.html" />
     <None Include="wwwroot\Theme\free-nonprofit-website-template.jpg" />
-    <None Include="wwwroot\Theme\img\about-1.png" />
+    <None Include="wwwroot\Theme\img\about-1.pngpng" />
     <None Include="wwwroot\Theme\img\about-2.jpg" />
     <None Include="wwwroot\Theme\img\carousel-1.jpg" />
     <None Include="wwwroot\Theme\img\carousel-2.jpg" />

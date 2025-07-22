@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ParadiseAvenueMuslimCemetery.Models.Registration
+@{
     ViewData["Title"] = "Burial Registration";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
@@ -141,7 +142,103 @@
     <p><strong>By signing this document, you (legal representative of the deceased) certify that you have read, understand and agree to the rules and regulations as stated above.</strong></p>
 
     </p>
-    <form>
+    @using (Html.BeginForm("RegistrationForm", "BurialService", FormMethod.Post))
+    {
+        <div class="form-row">
+            <div class="form-group">
+                @Html.LabelFor(m => m.DeceasedName, "Name of Deceased")
+                @Html.TextBoxFor(m => m.DeceasedName, new { @class = "form-control", required = "required" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Gender)
+                @Html.DropDownListFor(m => m.Gender, new SelectList(new[] { "Male", "Female" }), "Select", new { @class = "form-control", required = "required" })
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Dob, "Date of Birth")
+                @Html.TextBoxFor(m => m.Dob, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Dod, "Date of Death")
+                @Html.TextBoxFor(m => m.Dod, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                @Html.LabelFor(m => m.BurialDate, "Date of Burial")
+                @Html.TextBoxFor(m => m.BurialDate, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.BurialTime, "Burial Time")
+                @Html.TextBoxFor(m => m.BurialTime, new { @class = "form-control", type = "time" })
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Hospital, "Hospital Used")
+                @Html.TextBoxFor(m => m.Hospital, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.FuneralHome, "Funeral Home Used")
+                @Html.TextBoxFor(m => m.FuneralHome, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HomePhone, "Home Phone")
+                @Html.TextBoxFor(m => m.HomePhone, new { @class = "form-control", type = "tel" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.CellPhone, "Work/Cell Phone")
+                @Html.TextBoxFor(m => m.CellPhone, new { @class = "form-control", type = "tel" })
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Address, "Street Address")
+                @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.City)
+                @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                @Html.LabelFor(m => m.State)
+                @Html.TextBoxFor(m => m.State, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Zip, "Zip Code")
+                @Html.TextBoxFor(m => m.Zip, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LegalName, "Legal Representative Name")
+                @Html.TextBoxFor(m => m.LegalName, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <button type="submit" class="btn btn-primary">Submit Registration</button>
+        </div>
+    }
+
+@*     <form asp-action="RegistrationForm" asp-controller="BurialService" method="post">
+        
         <div class="form-row">
             <div class="form-group">
                 <label>Name of Deceased</label>
@@ -238,4 +335,4 @@
             <button type="submit">Submit Registration</button>
         </div>
     </form>
-</div>
+ *@</div>

@@ -3,6 +3,7 @@ using ParadiseAvenueMuslimCemetery;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<ParadiseAvenueMuslimCemetery.IEmailSender, ParadiseAvenueMuslimCemetery.EmailSender>();
+//builder.Services.AddScoped<ParadiseAvenueMuslimCemetery.IEmailSender, ParadiseAvenueMuslimCemetery.EmailSender>();
 
 // Add services to the container. //  t5ss
 builder.Services.AddControllersWithViews();
